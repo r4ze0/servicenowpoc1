@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_alias">
+    <sys_alias action="INSERT_OR_UPDATE">
+        <configuration_template/>
+        <connection_type>http_connection</connection_type>
+        <id>x_1075635_capgem_0.ServiceNow_cred</id>
+        <multiple_connections>false</multiple_connections>
+        <name>ServiceNow-cred</name>
+        <parent/>
+        <retry_policy display_value="Default HTTP Retry Policy">ef751ff07301330025d71afe2ff6a7f9</retry_policy>
+        <sys_class_name>sys_alias</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-16 06:21:28</sys_created_on>
+        <sys_id>5d68ce7797603110bd95bbc3f153afd1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1075635_capgem_0.ServiceNow_cred</sys_name>
+        <sys_package display_value="Capgemini" source="x_1075635_capgem_0">9f10ec9a97603110bd95bbc3f153af79</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Capgemini">9f10ec9a97603110bd95bbc3f153af79</sys_scope>
+        <sys_update_name>sys_alias_5d68ce7797603110bd95bbc3f153afd1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-16 06:21:28</sys_updated_on>
+        <type>credential</type>
+    </sys_alias>
+</record_update>
