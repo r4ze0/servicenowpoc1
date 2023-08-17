@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="awa_queue">
+    <awa_queue action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <average_wait_time>1970-01-01 00:00:07</average_wait_time>
+        <condition/>
+        <condition_mode>simple</condition_mode>
+        <condition_script><![CDATA[(function executeCondition(/* glide record */ current) {  
+	// customize condition logic here, return true or false  
+	return false;
+})(current);]]></condition_script>
+        <evaluation_scope>document</evaluation_scope>
+        <external>false</external>
+        <external_id/>
+        <initial_agent_response>Thank you for contacting support. I am looking into your question now and will be with you shortly.</initial_agent_response>
+        <max_wait_time/>
+        <max_wait_time_message>No agents are available to chat right now. Check back later.</max_wait_time_message>
+        <name>capg-support</name>
+        <number>QUE00002</number>
+        <order>500</order>
+        <schedule display_value="24 x 7">38fa64edc0a8016400f4a5724b0434b8</schedule>
+        <service_channel display_value="Chat">27f675e3739713004a905ee515f6a7c3</service_channel>
+        <short_description>support queue</short_description>
+        <subflow/>
+        <sys_class_name>awa_queue</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-16 08:00:25</sys_created_on>
+        <sys_id>e9fe52ff97a03110bd95bbc3f153af11</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>capg-support</sys_name>
+        <sys_package display_value="Capgemini" source="x_1075635_capgem_0">9f10ec9a97603110bd95bbc3f153af79</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Capgemini">9f10ec9a97603110bd95bbc3f153af79</sys_scope>
+        <sys_update_name>awa_queue_e9fe52ff97a03110bd95bbc3f153af11</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-08-17 04:44:45</sys_updated_on>
+        <target_wait_time/>
+        <use_condition>true</use_condition>
+    </awa_queue>
+</record_update>

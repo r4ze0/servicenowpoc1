@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="awa_queue_item_sorting">
+    <awa_queue_item_sorting action="INSERT_OR_UPDATE">
+        <field>sys_created_on</field>
+        <order>1000</order>
+        <queue display_value="capg-support">e9fe52ff97a03110bd95bbc3f153af11</queue>
+        <sort_direction>ascending</sort_direction>
+        <sys_class_name>awa_queue_item_sorting</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-16 08:00:25</sys_created_on>
+        <sys_id>302fd6ff97a03110bd95bbc3f153af63</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sys_created_on</sys_name>
+        <sys_package display_value="Capgemini" source="x_1075635_capgem_0">9f10ec9a97603110bd95bbc3f153af79</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Capgemini">9f10ec9a97603110bd95bbc3f153af79</sys_scope>
+        <sys_update_name>awa_queue_item_sorting_302fd6ff97a03110bd95bbc3f153af63</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-16 08:00:25</sys_updated_on>
+    </awa_queue_item_sorting>
+</record_update>

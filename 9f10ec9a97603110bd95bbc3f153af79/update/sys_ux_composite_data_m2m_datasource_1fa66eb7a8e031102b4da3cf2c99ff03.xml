@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_composite_data_m2m_datasource">
+    <sys_ux_composite_data_m2m_datasource action="INSERT_OR_UPDATE">
+        <dataset display_value="Custom Portal Landing - Popular Articles">5fa66eb750e031109a97843877a19204</dataset>
+        <datasource display_value="Custom Portal Landing - Popular articles Datasource">d7a66eb791e03110f71b19217c5a3104</datasource>
+        <sys_class_name>sys_ux_composite_data_m2m_datasource</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2023-08-16 08:33:25</sys_created_on>
+        <sys_id>1fa66eb7a8e031102b4da3cf2c99ff03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Capgemini" source="x_1075635_capgem_0">9f10ec9a97603110bd95bbc3f153af79</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Capgemini">9f10ec9a97603110bd95bbc3f153af79</sys_scope>
+        <sys_update_name>sys_ux_composite_data_m2m_datasource_1fa66eb7a8e031102b4da3cf2c99ff03</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-08-16 08:33:25</sys_updated_on>
+    </sys_ux_composite_data_m2m_datasource>
+</record_update>

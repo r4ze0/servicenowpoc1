@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_applicability_m2m_screen">
+    <sys_ux_applicability_m2m_screen action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applicability display_value="Public">17a66eb746e03110cd854f71ceb7540f</applicability>
+        <order>0</order>
+        <screen display_value="Login Default">13a66eb7cbe0311029618dcdd9699b0a</screen>
+        <sys_class_name>sys_ux_applicability_m2m_screen</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2023-08-16 08:33:23</sys_created_on>
+        <sys_id>93a66eb7f3e03110b2299a909e0c4e0a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Capgemini" source="x_1075635_capgem_0">9f10ec9a97603110bd95bbc3f153af79</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Capgemini">9f10ec9a97603110bd95bbc3f153af79</sys_scope>
+        <sys_update_name>sys_ux_applicability_m2m_screen_93a66eb7f3e03110b2299a909e0c4e0a</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-08-16 08:33:23</sys_updated_on>
+    </sys_ux_applicability_m2m_screen>
+</record_update>
