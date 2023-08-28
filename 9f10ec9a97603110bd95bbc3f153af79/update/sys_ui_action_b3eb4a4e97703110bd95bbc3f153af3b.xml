@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>create_case</action_name>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition>new GlideRecord("x_1075635_capgem_0_case").canCreate()</condition>
+        <form_action>false</form_action>
+        <form_button>false</form_button>
+        <form_button_v2>true</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>true</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Create capg case</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[current.update();
+
+var newRecord = new GlideRecord("x_1075635_capgem_0_case");
+newRecord.initialize();
+
+if (!gs.nil(current.account))
+    newRecord.setValue("account", current.getValue("account"));
+
+if (!gs.nil(current.contact))
+    newRecord.setValue("contact", current.getValue("contact"));
+
+if (!gs.nil(current.consumer))
+    newRecord.setValue("consumer", current.getValue("consumer"));
+
+if (GlidePluginManager.isActive('com.snc.csm_proxy_contacts') && !gs.nil(current.opened_for) &&
+    current.opened_for.sys_class_name == "sys_user" && new sn_csm_proxy_cont.ProxyContactHelper().isUserProxyContact(current.getValue("opened_for")))
+    newRecord.setValue("internal_contact", current.getValue("opened_for"));
+
+if (current.getValue('type') == 'phone')
+    newRecord.setValue('contact_type', 'phone');
+if (current.getValue('type') == 'chat')
+    newRecord.setValue('contact_type', 'chat');
+
+action.openGlideRecord(newRecord);
+
+// Tracks number of "Create Case" clicks on the Interaction form via CSM Agent Workspace
+var csmWorkspaceUAUtil = new sn_csm_workspace.CSMWorkspaceUAUtil();
+csmWorkspaceUAUtil.createCaseClickInteraction();
+
+intRelUtil = new global.InteractionRelationshipUtil();
+if (intRelUtil.copyAttachments !== undefined)
+	intRelUtil.copyAttachments(current, newRecord);]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-23 06:22:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b3eb4a4e97703110bd95bbc3f153af3b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Create capg case</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Capgemini" source="x_1075635_capgem_0">9f10ec9a97603110bd95bbc3f153af79</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Capgemini">9f10ec9a97603110bd95bbc3f153af79</sys_scope>
+        <sys_update_name>sys_ui_action_b3eb4a4e97703110bd95bbc3f153af3b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-23 06:31:03</sys_updated_on>
+        <table>interaction</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

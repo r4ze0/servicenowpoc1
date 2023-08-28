@@ -1,3 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="98a0a01e97603110bd95bbc3f153af8c" extends="task" label="Case" max_length="40" name="x_1075635_capgem_0_case" text_index="true" type="collection"/>
+    <element db_object_id="98a0a01e97603110bd95bbc3f153af8c" extends="task" label="Case" max_length="40" name="x_1075635_capgem_0_case" text_index="true" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Chat conversations" max_length="4000" name="chat_conversations" type="journal"/>
+    </element>
 </database>
