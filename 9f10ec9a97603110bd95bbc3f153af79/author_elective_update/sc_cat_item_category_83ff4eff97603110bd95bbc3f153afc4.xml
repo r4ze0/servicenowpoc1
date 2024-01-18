@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="DELETE">
+        <sc_cat_item display_value="create a case">e93f8ebf97603110bd95bbc3f153af7a</sc_cat_item>
+        <sc_category display_value="Support">1b8611d5c3921200b0449f2974d3ae12</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-16 06:54:13</sys_created_on>
+        <sys_id>83ff4eff97603110bd95bbc3f153afc4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Support.create a case</sys_name>
+        <sys_package display_value="Capgemini" source="x_1075635_capgem_0">9f10ec9a97603110bd95bbc3f153af79</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Capgemini">9f10ec9a97603110bd95bbc3f153af79</sys_scope>
+        <sys_update_name>sc_cat_item_category_83ff4eff97603110bd95bbc3f153afc4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-16 06:54:13</sys_updated_on>
+    </sc_cat_item_category>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Capgemini">9f10ec9a97603110bd95bbc3f153af79</application>
+        <file_path/>
+        <instance_id>f606dcb9dbe72010c6e711f848961980</instance_id>
+        <instance_name>dev112004</instance_name>
+        <name>sc_cat_item_category_83ff4eff97603110bd95bbc3f153afc4</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category"><sc_cat_item_category action="INSERT_OR_UPDATE"><sc_cat_item display_value="create a case">e93f8ebf97603110bd95bbc3f153af7a</sc_cat_item><sc_category display_value="Support">1b8611d5c3921200b0449f2974d3ae12</sc_category><sys_class_name>sc_cat_item_category</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-08-16 06:54:13</sys_created_on><sys_id>83ff4eff97603110bd95bbc3f153afc4</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Support.create a case</sys_name><sys_package display_value="Capgemini" source="x_1075635_capgem_0">9f10ec9a97603110bd95bbc3f153af79</sys_package><sys_policy/><sys_scope display_value="Capgemini">9f10ec9a97603110bd95bbc3f153af79</sys_scope><sys_update_name>sc_cat_item_category_83ff4eff97603110bd95bbc3f153afc4</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-08-16 06:54:13</sys_updated_on></sc_cat_item_category></record_update>]]></payload>
+        <payload_hash>-940441535</payload_hash>
+        <record_name>Support.create a case</record_name>
+        <reverted_from/>
+        <source>7e978e3797603110bd95bbc3f153af83</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-16 06:54:13</sys_created_on>
+        <sys_id>c7ff4eff97603110bd95bbc3f153afc8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>189fd1f971e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-16 06:54:13</sys_updated_on>
+        <type>Catalog Item Category</type>
+        <update_guid>4fff4eff836031109f9a75b5d69840c7</update_guid>
+        <update_guid_history>4fff4eff836031109f9a75b5d69840c7:-940441535</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Support.create a case">d990d63397a03110bd95bbc3f153afec</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-16 06:56:50</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_category">sc_cat_item_category</sys_db_object>
+        <sys_id>bc13c6d9816b4c589c2db1d5f841f309</sys_id>
+        <sys_metadata>83ff4eff97603110bd95bbc3f153afc4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Support.create a case</sys_name>
+        <sys_package display_value="Capgemini" source="x_1075635_capgem_0">9f10ec9a97603110bd95bbc3f153af79</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Capgemini">9f10ec9a97603110bd95bbc3f153af79</sys_scope>
+        <sys_scope_delete display_value="">17430a34acfb4f68bd62e37c5c256040</sys_scope_delete>
+        <sys_update_name>sc_cat_item_category_83ff4eff97603110bd95bbc3f153afc4</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_category_83ff4eff97603110bd95bbc3f153afc4">c7ff4eff97603110bd95bbc3f153afc8</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-16 06:56:50</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

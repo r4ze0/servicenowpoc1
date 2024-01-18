@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_design_topic">
+    <sys_cb_design_topic action="INSERT_OR_UPDATE">
+        <compiled_topic display_value="storing medical info">64f0607497853110bd95bbc3f153aff6</compiled_topic>
+        <design_definition>{"type":"FlowTopic","type":"FlowTopic","triggers":[{"type":"Trigger","name":"46c4d5373f1d40cdb46f73f275520884","triggerType":"request","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"id":"46c4d5373f1d40cdb46f73f275520884"}],"goals":[{"name":"primary","trigger_id":"46c4d5373f1d40cdb46f73f275520884","nodes":[{"type":"StartGoal","type":"StartGoal","goal_id":"primary","greeting_msg":{"type":"String","type":"String","mode":"string","value":""},"id":"d624a61e9ac14adba73c2c970147e71a","name":"Start"},{"type":"TerminateGoal","type":"TerminateGoal","goal_id":"primary","confirmation_msg":{"type":"String","type":"String","mode":"string","value":""},"id":"46bd8699c01f45beab756992170d97d5","name":"End"},{"type":"ChoiceInputPrompt","type":"ChoiceInputPrompt","expression_mode":"simple","metadataScript":"","cardName":"","cardFields":[],"id":"3a5ea02f4df947f9b10ffe274291a7d8","name":"u_user_input","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"variable_id":"316ab855d80f44cb88721a03ab515260","message":{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"Select choice\", vaContext.getRequesterLang())"},"skippable":{"type":"Applicability","type":"Applicability","mode":"script","value":"false"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true}},{"type":"Decision","type":"Decision","name":"Decision","branches":[{"type":"Branch","type":"Branch","label":"skip","expression":{"type":"Applicability","type":"Applicability","mode":"query","value":"u_user_input=Skip"},"id":"347ad51bf7cd425a9660f8543c5ec746","name":"skip"},{"type":"Branch","type":"Branch","label":"Enter medical info","expression":{"type":"Applicability","type":"Applicability","mode":"query","value":"u_user_input=Enter medical info"},"id":"49a05417e81849ada217536f42fd110c","name":"Enter medical info"}],"id":"4e3fc6fc9ed44be183967910e5c0a516","goal_id":"primary"},{"type":"TerminateGoal","type":"TerminateGoal","goal_id":"primary","id":"08ece7df0ca8468eb77a72978d6b5fc0","name":"ImplicitEnd__f418893befef4e0a9e50c4d84888445d"},{"type":"InputPrompt","type":"InputPrompt","variable_id":"52eb908f373c4336b6e7916617ba955b","message":{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"Enter your blood group\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"skippable":{"type":"Applicability","type":"Applicability","mode":"script","value":"false"},"id":"b0492c077a8b4996b08c21d979f450de","name":"u_msg_bg","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"formatType":"Text","validationScript":""},{"type":"InputPrompt","type":"InputPrompt","variable_id":"990efc29a75f44759535290c79037f7b","message":{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"Enter your blood pressure\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"skippable":{"type":"Applicability","type":"Applicability","mode":"script","value":"false"},"id":"8822bf7609b44df49ef6efb072e7e937","name":"u_msg_bp","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"formatType":"Text","validationScript":""},{"type":"InputPrompt","type":"InputPrompt","variable_id":"1cd2f15532fd45c39eeb7f240a626907","message":{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"Enter Your height\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"skippable":{"type":"Applicability","type":"Applicability","mode":"script","value":"false"},"id":"b03801cbf5eb410a86d1f69d3df670fe","name":"u_msg_hei","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"formatType":"Text","validationScript":""},{"type":"InputPrompt","type":"InputPrompt","variable_id":"ea20dce3c07a434d937dbaae9087201d","message":{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"Enter your blood glucose level\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"skippable":{"type":"Applicability","type":"Applicability","mode":"script","value":"false"},"id":"3eb75601ef2346d8a99ffc36a5a391ae","name":"u_msg_bglu","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"formatType":"Text","validationScript":""},{"type":"InputPrompt","type":"InputPrompt","variable_id":"b35ddb15ae604e1a9231292fe4b2199d","message":{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"Enter your blood sugar level\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"skippable":{"type":"Applicability","type":"Applicability","mode":"script","value":"false"},"id":"586cb4edee91432d846c8c046272e7d5","name":"u_msg_bs","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"formatType":"Text","validationScript":""},{"type":"InputPrompt","type":"InputPrompt","variable_id":"4043869c9b69497594f78f5a81c44ee1","message":{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"Enter your weight\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"skippable":{"type":"Applicability","type":"Applicability","mode":"script","value":"false"},"id":"9d807f7f9e7448219715821c0581fd64","name":"u_msg_wei","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"formatType":"Text","validationScript":""},{"type":"ScriptedAction","type":"ScriptedAction","script":"(function execute() {\n    /* Code your scripted action here. For example, you might update a\n       record based on conditional logic:\n\n        if (vaVars.my_flag == 'say hello') {\n            gs.info('hi there');\n        } else {\n            gs.info('bye now');\n        }\n    */\n    var gr=new GlideRecord('x_1075635_capgem_0_medicalinfo');\n    gr.initialize();\n    gr.bloodgroup=vaInputs.u_msg_bg;\n    gr.blood_pressure=vaInputs.u_msg_bp;\n    gr.height=vaInputs.u_msg_hei;\n    gr.blood_glucose=vaInputs.u_msg_bglu;\n    gr.blood_sugar=vaInputs.u_msg_bs;\n    gr.weight=vaInputs.u_msg_wei;\n    gr.insert();\n    vaVars.info_num=gr.number;\n    vaVars.sid=gr.sys_id;\n\n})()\n","id":"60993e0b672f4d4897ef919af4d6beac","name":"Create Medcase","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"}},{"type":"LinkOutputPrompt","type":"LinkOutputPrompt","header":{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"info created\", vaContext.getRequesterLang())"},"label":{"type":"String","type":"String","mode":"string","value":"{{vaVars.info_num}}"},"url":{"type":"String","type":"String","mode":"string","value":"/nav_to.do?uri=x_1075635_capgem_0_medicalinfo.do?sys_id={{vaVars.sid}}"},"link_type":"single","multi_link_script":"","id":"3c3f6fbee6a44871bfc1c50eac6a7de4","name":"link","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"}},{"type":"InputPrompt","type":"InputPrompt","variable_id":"c5b646aa7fef45f89605b32f60acdbc2","message":{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"Attach your serology test result\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"skippable":{"type":"Applicability","type":"Applicability","mode":"script","value":"false"},"id":"4ba69b0f2337449194333ed4c2c7dd89","name":"u_msg_file","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"}},{"type":"ScriptedAction","type":"ScriptedAction","script":"(function execute() {\n\nvaSystem.attachToRecord(vaInputs.u_msg_file.getValue(), 'x_1075635_capgem_0_medicalinfo', vaVars.sid);\n\n})()","id":"25d8b7c9d8da43adb4d00a16ef3493aa","name":"add_to_record","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"}}],"edges":[{"type":"Edge","source_node_id":"d624a61e9ac14adba73c2c970147e71a","target_node_id":"3a5ea02f4df947f9b10ffe274291a7d8","id":"205875dabc88402295aa6da90133a628"},{"type":"Edge","source_node_id":"3a5ea02f4df947f9b10ffe274291a7d8","target_node_id":"4e3fc6fc9ed44be183967910e5c0a516","id":"61bea8392fc14d16b7f2960f850f6d8d"},{"type":"Edge","source_node_id":"4e3fc6fc9ed44be183967910e5c0a516","target_node_id":"08ece7df0ca8468eb77a72978d6b5fc0","branch_id":"347ad51bf7cd425a9660f8543c5ec746","id":"7742ab4db7124f9383d140cb6bbb9dac","name":"347ad51bf7cd425a9660f8543c5ec746"},{"type":"Edge","source_node_id":"4e3fc6fc9ed44be183967910e5c0a516","target_node_id":"b0492c077a8b4996b08c21d979f450de","branch_id":"49a05417e81849ada217536f42fd110c","id":"e95b0fa5c6674025ab9e55394159dbd4","name":"49a05417e81849ada217536f42fd110c"},{"type":"Edge","source_node_id":"b0492c077a8b4996b08c21d979f450de","target_node_id":"8822bf7609b44df49ef6efb072e7e937","id":"ca2307f78f4f4de08071b8d535ec4ed1"},{"type":"Edge","source_node_id":"8822bf7609b44df49ef6efb072e7e937","target_node_id":"b03801cbf5eb410a86d1f69d3df670fe","id":"1dab2829821548eca62582a102eb720e"},{"type":"Edge","source_node_id":"b03801cbf5eb410a86d1f69d3df670fe","target_node_id":"3eb75601ef2346d8a99ffc36a5a391ae","id":"d94e83327c584e76826a877a6b9fb5a0"},{"type":"Edge","source_node_id":"3eb75601ef2346d8a99ffc36a5a391ae","target_node_id":"586cb4edee91432d846c8c046272e7d5","id":"37c85d5a58184cd9a663cd2ed70f0984"},{"type":"Edge","source_node_id":"586cb4edee91432d846c8c046272e7d5","target_node_id":"9d807f7f9e7448219715821c0581fd64","id":"ebe4005538314daca4abf7401d33661e"},{"type":"Edge","source_node_id":"3c3f6fbee6a44871bfc1c50eac6a7de4","target_node_id":"46bd8699c01f45beab756992170d97d5","id":"c3c9cf3d4eb2407fabc481b85858f464"},{"type":"Edge","source_node_id":"9d807f7f9e7448219715821c0581fd64","target_node_id":"4ba69b0f2337449194333ed4c2c7dd89","id":"bdcc90b1cbb04988b08277d8346afb45"},{"type":"Edge","source_node_id":"4ba69b0f2337449194333ed4c2c7dd89","target_node_id":"60993e0b672f4d4897ef919af4d6beac","id":"fb1964ec513744f09afe67c40094fa13"},{"type":"Edge","source_node_id":"60993e0b672f4d4897ef919af4d6beac","target_node_id":"25d8b7c9d8da43adb4d00a16ef3493aa","id":"8c742f3933c643c8a1fafc48a7002e93"},{"type":"Edge","source_node_id":"25d8b7c9d8da43adb4d00a16ef3493aa","target_node_id":"3c3f6fbee6a44871bfc1c50eac6a7de4","id":"49a829483466466ab3493f411742997b"}],"id":"primary"}],"script_variables":[{"type":"VariableDto","type":"String","name":"info_num","value":{"type":"String","type":"String","mode":"string"},"list":false,"id":"43ddedd5f0ce4a2d90fe7ace7775891e","formatType":"text","secure":false,"sensitive":false},{"type":"VariableDto","type":"String","name":"sid","value":{"type":"String","type":"String","mode":"string"},"list":false,"id":"ac78e4589e3e45b680cb6df89ccc1095","formatType":"text","secure":false,"sensitive":false}],"glide_variables":[{"type":"Reference","type":"Reference","table":"sys_user","id":"current-user","name":"user","formatType":"text","secure":false,"sensitive":false,"list":false},{"type":"Choice","type":"Choice","choices":[{"name":"Enter medical info","element":"Enter medical info"},{"name":"Skip","element":"Skip"}],"id":"316ab855d80f44cb88721a03ab515260","name":"u_user_input","formatType":"text","secure":false,"sensitive":false,"list":false},{"type":"VariableDto","type":"String","name":"u_msg_bg","list":false,"id":"52eb908f373c4336b6e7916617ba955b","formatType":"Text","validationScript":"","secure":false,"sensitive":false},{"type":"VariableDto","type":"String","name":"u_msg_bp","list":false,"id":"990efc29a75f44759535290c79037f7b","formatType":"Text","validationScript":"","secure":false,"sensitive":false},{"type":"VariableDto","type":"String","name":"u_msg_hei","list":false,"id":"1cd2f15532fd45c39eeb7f240a626907","formatType":"Text","validationScript":"","secure":false,"sensitive":false},{"type":"VariableDto","type":"String","name":"u_msg_bglu","list":false,"id":"ea20dce3c07a434d937dbaae9087201d","formatType":"Text","validationScript":"","secure":false,"sensitive":false},{"type":"VariableDto","type":"String","name":"u_msg_bs","list":false,"id":"b35ddb15ae604e1a9231292fe4b2199d","formatType":"Text","validationScript":"","secure":false,"sensitive":false},{"type":"VariableDto","type":"String","name":"u_msg_wei","list":false,"id":"4043869c9b69497594f78f5a81c44ee1","formatType":"Text","validationScript":"","secure":false,"sensitive":false},{"type":"File","type":"File","id":"c5b646aa7fef45f89605b32f60acdbc2","name":"u_msg_file","formatType":"text","secure":false,"sensitive":false,"list":false}],"applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"roles":[],"scope":"9f10ec9a97603110bd95bbc3f153af79","domain":"global","topic_type":"STANDARD","channels":[],"id":"7b6d9cfc97453110bd95bbc3f153afe6","name":"storing medical info","key_phrases":["storing medical info","medical","paitent","info"],"nlu_provider":"","nlu_model":"","nlu_model_label":"","nlu_intent":"","nlu_intent_label":"","flexible_conversation_switching":false,"autopilot_topic":true,"design_categories":[],"triggerable_by_notification":false,"library":false,"readOnly":false,"nluMapping":"[]"}</design_definition>
+        <design_topic_id>7b6d9cfc97453110bd95bbc3f153afe6</design_topic_id>
+        <graph>{
+  "graph_api_version": "1.0.41",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "d624a61e9ac14adba73c2c970147e71a": {
+          "id": "d624a61e9ac14adba73c2c970147e71a",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "46bd8699c01f45beab756992170d97d5": {
+          "id": "46bd8699c01f45beab756992170d97d5",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "3a5ea02f4df947f9b10ffe274291a7d8": {
+          "stepType": "ChoicePrompt",
+          "name": "u_user_input",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Select choice"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "316ab855d80f44cb88721a03ab515260",
+          "id": "3a5ea02f4df947f9b10ffe274291a7d8",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "4e3fc6fc9ed44be183967910e5c0a516": {
+          "id": "4e3fc6fc9ed44be183967910e5c0a516",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "08ece7df0ca8468eb77a72978d6b5fc0": {
+          "id": "08ece7df0ca8468eb77a72978d6b5fc0",
+          "stepType": "ImplicitEnd"
+        },
+        "b0492c077a8b4996b08c21d979f450de": {
+          "id": "b0492c077a8b4996b08c21d979f450de",
+          "stepType": "Prompt",
+          "name": "u_msg_bg",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Enter your blood group"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "52eb908f373c4336b6e7916617ba955b",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "8822bf7609b44df49ef6efb072e7e937": {
+          "id": "8822bf7609b44df49ef6efb072e7e937",
+          "stepType": "Prompt",
+          "name": "u_msg_bp",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Enter your blood pressure"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "990efc29a75f44759535290c79037f7b",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "b03801cbf5eb410a86d1f69d3df670fe": {
+          "id": "b03801cbf5eb410a86d1f69d3df670fe",
+          "stepType": "Prompt",
+          "name": "u_msg_hei",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Enter Your height"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "1cd2f15532fd45c39eeb7f240a626907",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "3eb75601ef2346d8a99ffc36a5a391ae": {
+          "id": "3eb75601ef2346d8a99ffc36a5a391ae",
+          "stepType": "Prompt",
+          "name": "u_msg_bglu",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Enter your blood glucose level"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "ea20dce3c07a434d937dbaae9087201d",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "586cb4edee91432d846c8c046272e7d5": {
+          "id": "586cb4edee91432d846c8c046272e7d5",
+          "stepType": "Prompt",
+          "name": "u_msg_bs",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Enter your blood sugar level"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "b35ddb15ae604e1a9231292fe4b2199d",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "9d807f7f9e7448219715821c0581fd64": {
+          "id": "9d807f7f9e7448219715821c0581fd64",
+          "stepType": "Prompt",
+          "name": "u_msg_wei",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Enter your weight"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "4043869c9b69497594f78f5a81c44ee1",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "60993e0b672f4d4897ef919af4d6beac": {
+          "id": "60993e0b672f4d4897ef919af4d6beac",
+          "name": "Create Medcase",
+          "script": "(function execute() {\n    /* Code your scripted action here. For example, you might update a\n       record based on conditional logic:\n\n        if (vaVars.my_flag == 'say hello') {\n            gs.info('hi there');\n        } else {\n            gs.info('bye now');\n        }\n    */\n    var gr=new GlideRecord('x_1075635_capgem_0_medicalinfo');\n    gr.initialize();\n    gr.bloodgroup=vaInputs.u_msg_bg;\n    gr.blood_pressure=vaInputs.u_msg_bp;\n    gr.height=vaInputs.u_msg_hei;\n    gr.blood_glucose=vaInputs.u_msg_bglu;\n    gr.blood_sugar=vaInputs.u_msg_bs;\n    gr.weight=vaInputs.u_msg_wei;\n    gr.insert();\n    vaVars.info_num=gr.number;\n    vaVars.sid=gr.sys_id;\n\n})()\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "3c3f6fbee6a44871bfc1c50eac6a7de4": {
+          "id": "3c3f6fbee6a44871bfc1c50eac6a7de4",
+          "stepType": "LinkOutput",
+          "name": "link",
+          "url": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "/nav_to.do?uri=x_1075635_capgem_0_medicalinfo.do?sys_id="
+                  },
+                  {
+                    "type": "datapill",
+                    "dataPill": {
+                      "value": "{{vaVars.sid}}",
+                      "displayValue": "Script Variables➛sid"
+                    },
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "label": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "type": "datapill",
+                    "dataPill": {
+                      "value": "{{vaVars.info_num}}",
+                      "displayValue": "Script Variables➛info_num"
+                    },
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "header": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "info created"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "linkType": "single",
+          "introMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "listOfLinks": ""
+        },
+        "4ba69b0f2337449194333ed4c2c7dd89": {
+          "id": "4ba69b0f2337449194333ed4c2c7dd89",
+          "stepType": "Prompt",
+          "name": "u_msg_file",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Attach your serology test result"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "c5b646aa7fef45f89605b32f60acdbc2"
+        },
+        "25d8b7c9d8da43adb4d00a16ef3493aa": {
+          "id": "25d8b7c9d8da43adb4d00a16ef3493aa",
+          "name": "add_to_record",
+          "script": "(function execute() {\n\nvaSystem.attachToRecord(vaInputs.u_msg_file.getValue(), 'x_1075635_capgem_0_medicalinfo', vaVars.sid);\n\n})()",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        }
+      },
+      "edges": [
+        {
+          "id": "205875dabc88402295aa6da90133a628",
+          "edgeType": "Edge",
+          "source": "d624a61e9ac14adba73c2c970147e71a",
+          "target": "3a5ea02f4df947f9b10ffe274291a7d8",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "61bea8392fc14d16b7f2960f850f6d8d",
+          "edgeType": "Edge",
+          "source": "3a5ea02f4df947f9b10ffe274291a7d8",
+          "target": "4e3fc6fc9ed44be183967910e5c0a516",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "7742ab4db7124f9383d140cb6bbb9dac",
+          "edgeType": "Branch",
+          "source": "4e3fc6fc9ed44be183967910e5c0a516",
+          "target": "08ece7df0ca8468eb77a72978d6b5fc0",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.u_user_input=Skip",
+            "mode": "query"
+          },
+          "label": "skip"
+        },
+        {
+          "id": "e95b0fa5c6674025ab9e55394159dbd4",
+          "edgeType": "Branch",
+          "source": "4e3fc6fc9ed44be183967910e5c0a516",
+          "target": "b0492c077a8b4996b08c21d979f450de",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.u_user_input=Enter medical info",
+            "mode": "query"
+          },
+          "label": "Enter medical info"
+        },
+        {
+          "id": "ca2307f78f4f4de08071b8d535ec4ed1",
+          "edgeType": "Edge",
+          "source": "b0492c077a8b4996b08c21d979f450de",
+          "target": "8822bf7609b44df49ef6efb072e7e937",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "1dab2829821548eca62582a102eb720e",
+          "edgeType": "Edge",
+          "source": "8822bf7609b44df49ef6efb072e7e937",
+          "target": "b03801cbf5eb410a86d1f69d3df670fe",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "d94e83327c584e76826a877a6b9fb5a0",
+          "edgeType": "Edge",
+          "source": "b03801cbf5eb410a86d1f69d3df670fe",
+          "target": "3eb75601ef2346d8a99ffc36a5a391ae",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "37c85d5a58184cd9a663cd2ed70f0984",
+          "edgeType": "Edge",
+          "source": "3eb75601ef2346d8a99ffc36a5a391ae",
+          "target": "586cb4edee91432d846c8c046272e7d5",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "ebe4005538314daca4abf7401d33661e",
+          "edgeType": "Edge",
+          "source": "586cb4edee91432d846c8c046272e7d5",
+          "target": "9d807f7f9e7448219715821c0581fd64",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "c3c9cf3d4eb2407fabc481b85858f464",
+          "edgeType": "Edge",
+          "source": "3c3f6fbee6a44871bfc1c50eac6a7de4",
+          "target": "46bd8699c01f45beab756992170d97d5",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "bdcc90b1cbb04988b08277d8346afb45",
+          "edgeType": "Edge",
+          "source": "9d807f7f9e7448219715821c0581fd64",
+          "target": "4ba69b0f2337449194333ed4c2c7dd89",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "fb1964ec513744f09afe67c40094fa13",
+          "edgeType": "Edge",
+          "source": "4ba69b0f2337449194333ed4c2c7dd89",
+          "target": "60993e0b672f4d4897ef919af4d6beac",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "8c742f3933c643c8a1fafc48a7002e93",
+          "edgeType": "Edge",
+          "source": "60993e0b672f4d4897ef919af4d6beac",
+          "target": "25d8b7c9d8da43adb4d00a16ef3493aa",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "49a829483466466ab3493f411742997b",
+          "edgeType": "Edge",
+          "source": "25d8b7c9d8da43adb4d00a16ef3493aa",
+          "target": "3c3f6fbee6a44871bfc1c50eac6a7de4",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "316ab855d80f44cb88721a03ab515260": {
+      "id": "316ab855d80f44cb88721a03ab515260",
+      "name": "u_user_input",
+      "label": "U_user_input",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "Enter medical info",
+          "value": "Enter medical info"
+        },
+        {
+          "label": "Skip",
+          "value": "Skip"
+        }
+      ],
+      "category": "vaInputs"
+    },
+    "52eb908f373c4336b6e7916617ba955b": {
+      "id": "52eb908f373c4336b6e7916617ba955b",
+      "name": "u_msg_bg",
+      "label": "U_msg_bg",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTY5MzQ4MTEyNzg4MiBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    },
+    "990efc29a75f44759535290c79037f7b": {
+      "id": "990efc29a75f44759535290c79037f7b",
+      "name": "u_msg_bp",
+      "label": "U_msg_bp",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTY5MzQ4MTE4Mjc4NSBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    },
+    "1cd2f15532fd45c39eeb7f240a626907": {
+      "id": "1cd2f15532fd45c39eeb7f240a626907",
+      "name": "u_msg_hei",
+      "label": "U_msg_hei",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTY5MzQ4MTIxNDI5OCBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    },
+    "ea20dce3c07a434d937dbaae9087201d": {
+      "id": "ea20dce3c07a434d937dbaae9087201d",
+      "name": "u_msg_bglu",
+      "label": "U_msg_bglu",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTY5MzQ4MTI0MDU4MyBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    },
+    "b35ddb15ae604e1a9231292fe4b2199d": {
+      "id": "b35ddb15ae604e1a9231292fe4b2199d",
+      "name": "u_msg_bs",
+      "label": "U_msg_bs",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTY5MzQ4MTI4MTYxNSBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    },
+    "4043869c9b69497594f78f5a81c44ee1": {
+      "id": "4043869c9b69497594f78f5a81c44ee1",
+      "name": "u_msg_wei",
+      "label": "U_msg_wei",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTY5MzQ4MTMxMzY2OCBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    },
+    "43ddedd5f0ce4a2d90fe7ace7775891e": {
+      "id": "43ddedd5f0ce4a2d90fe7ace7775891e",
+      "value": {
+        "value": "",
+        "mode": "simple"
+      },
+      "name": "info_num",
+      "label": "info_num",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "ac78e4589e3e45b680cb6df89ccc1095": {
+      "id": "ac78e4589e3e45b680cb6df89ccc1095",
+      "value": {
+        "value": "",
+        "mode": "simple"
+      },
+      "name": "sid",
+      "label": "sid",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "c5b646aa7fef45f89605b32f60acdbc2": {
+      "id": "c5b646aa7fef45f89605b32f60acdbc2",
+      "name": "u_msg_file",
+      "label": "U_msg_file",
+      "varType": "file",
+      "secure": false,
+      "category": "vaInputs"
+    }
+  }
+}</graph>
+        <name>storing medical info</name>
+        <sys_class_name>sys_cb_design_topic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-31 11:38:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>a4f0607497853110bd95bbc3f153affb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>FlowTopic</sys_name>
+        <sys_package display_value="Capgemini" source="x_1075635_capgem_0">9f10ec9a97603110bd95bbc3f153af79</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Capgemini">9f10ec9a97603110bd95bbc3f153af79</sys_scope>
+        <sys_update_name>sys_cb_design_topic_a4f0607497853110bd95bbc3f153affb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-06 05:19:12</sys_updated_on>
+        <type>FlowTopic</type>
+    </sys_cb_design_topic>
+</record_update>

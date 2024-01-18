@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_design_topic">
+    <sys_cb_design_topic action="INSERT_OR_UPDATE">
+        <compiled_topic display_value="Storing Paitent details">e230e7e097813110bd95bbc3f153af55</compiled_topic>
+        <design_definition>{"type":"FlowTopic","type":"FlowTopic","triggers":[{"type":"Trigger","name":"caf03635616f4d538d5a0642f8215400","triggerType":"request","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"id":"caf03635616f4d538d5a0642f8215400"}],"goals":[{"name":"primary","trigger_id":"caf03635616f4d538d5a0642f8215400","nodes":[{"type":"StartGoal","type":"StartGoal","goal_id":"primary","greeting_msg":{"type":"String","type":"String","mode":"string","value":""},"id":"a6b8aaa06abe465ca968a89177adc20f","name":"Start"},{"type":"TerminateGoal","type":"TerminateGoal","goal_id":"primary","confirmation_msg":{"type":"String","type":"String","mode":"string","value":""},"id":"b664815779ac498fbd967218a7a53778","name":"End"},{"type":"ChoiceInputPrompt","type":"ChoiceInputPrompt","expression_mode":"simple","metadataScript":"","cardName":"","cardFields":[],"id":"4b06404ae31949518c5170177c33a1aa","name":"u_user_input","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"variable_id":"5b4e0d2b123d40a99b7cb1a8821d36b7","message":{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"Select choice\", vaContext.getRequesterLang())"},"skippable":{"type":"Applicability","type":"Applicability","mode":"script","value":"false"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true}},{"type":"Decision","type":"Decision","name":"Decision","branches":[{"type":"Branch","type":"Branch","label":"search","expression":{"type":"Applicability","type":"Applicability","mode":"query","value":"u_user_input=Search"},"id":"b4e915aee255491b9b73ba9fc53f3f74","name":"search"},{"type":"Branch","type":"Branch","label":"create new","expression":{"type":"Applicability","type":"Applicability","mode":"query","value":"u_user_input=Create case"},"id":"b7c67238ff4a41f59e068d3f0c266d2b","name":"create new"}],"id":"2edbd0700df34418b9874369c318ecd5","goal_id":"primary"},{"type":"TerminateGoal","type":"TerminateGoal","goal_id":"primary","id":"bfafb4d1dfdc4e81b2d5bed62d4801cb","name":"ImplicitEnd__da4c6ec7346c469c81930691222a1d73"},{"type":"InputPrompt","type":"InputPrompt","variable_id":"0cdd351220ce4b428d7e17fd0552f8ca","message":{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"enter your first name\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"skippable":{"type":"Applicability","type":"Applicability","mode":"script","value":"false"},"id":"09c5dc92eb2f48d7ad89bc4436f990f0","name":"u_msg","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"formatType":"Text","validationScript":""},{"type":"ScriptedAction","type":"ScriptedAction","script":"(function execute() {\n    /* Code your scripted action here. For example, you might update a\n       record based on conditional logic:\n\n        if (vaVars.my_flag == 'say hello') {\n            gs.info('hi there');\n        } else {\n            gs.info('bye now');\n        }\n    */\n    var gr=new GlideRecord('x_1075635_capgem_0_paitentdetails');\n    gr.initialize();\n    gr.firstname=vaInputs.u_msg;\n    gr.lastname=vaInputs.u_msg_2;\n    gr.email=vaInputs.u_msg_3;\n    gr.phonenumber=vaInputs.u_msg_4;\n    gr.country=vaInputs.u_msg_5;\n    gr.country_state=vaInputs.u_msg_6;\n    gr.city=vaInputs.u_msg_ct;\n    gr.zip=vaInputs.u_msg_7;\n    gr.date_of_birth=vaInputs.u_msg_8;\n    gr.insert();\n    vaVars.inc_number=gr.number;\n    vaVars.sid=gr.sys_id;\n})()\n","id":"ba7d3cc85b6847eebbd5a83312a67ded","name":"process","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"}},{"type":"LinkOutputPrompt","type":"LinkOutputPrompt","header":{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"Created case\", vaContext.getRequesterLang())"},"label":{"type":"String","type":"String","mode":"string","value":"{{vaVars.inc_number}}"},"url":{"type":"String","type":"String","mode":"string","value":"/nav_to.do?uri=x_1075635_capgem_0_paitentdetails.do?sys_id={{vaVars.sid}}"},"link_type":"single","multi_link_script":"","id":"11b94a49e41d4a0b957154ec328ad39f","name":"link","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"}},{"type":"InputPrompt","type":"InputPrompt","variable_id":"85ff4721013145138036b07508d58639","message":{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"Enter your last name\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"skippable":{"type":"Applicability","type":"Applicability","mode":"script","value":"false"},"id":"f2f21b2cbd824a5282088124fa37c522","name":"u_msg_2","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"formatType":"Text","validationScript":""},{"type":"InputPrompt","type":"InputPrompt","variable_id":"47ca32edf225438ca38f8dae96ba15fb","message":{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"Enter your email\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"skippable":{"type":"Applicability","type":"Applicability","mode":"script","value":"false"},"id":"d1dd40c86b96421eaedce80861b4fb0e","name":"u_msg_3","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"formatType":"Text","validationScript":""},{"type":"InputPrompt","type":"InputPrompt","variable_id":"b920efc1448f41c2a143ff5ac7f3cdc3","message":{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"Enter your phone number\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"skippable":{"type":"Applicability","type":"Applicability","mode":"script","value":"false"},"id":"6e4a91ac769c4857960434464c20f776","name":"u_msg_4","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"formatType":"Text","validationScript":""},{"type":"InputPrompt","type":"InputPrompt","variable_id":"7d0467440c254f36b2e98b84a35b3e5a","message":{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"Enter the country you live in\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"skippable":{"type":"Applicability","type":"Applicability","mode":"script","value":"false"},"id":"b0e2005c49f248488fc068acb1bf4abe","name":"u_msg_5","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"formatType":"Text","validationScript":""},{"type":"InputPrompt","type":"InputPrompt","variable_id":"347916bedf61435ea6a5ff1bc96b06c5","message":{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"Enter the State you live in\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"skippable":{"type":"Applicability","type":"Applicability","mode":"script","value":"false"},"id":"84399065734b48feb93972cf281b99e5","name":"u_msg_6","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"formatType":"Text","validationScript":""},{"type":"InputPrompt","type":"InputPrompt","variable_id":"8528a033ee384809ad33424776f36d77","message":{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"Enter the zip code\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"skippable":{"type":"Applicability","type":"Applicability","mode":"script","value":"false"},"id":"f612fea06dc741c781ac40f3b9b7197e","name":"u_msg_7","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"formatType":"Text","validationScript":""},{"type":"InputPrompt","type":"InputPrompt","variable_id":"cbaa9caf71354f5386dd9dccdedbda4a","message":{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"Enter your date of birth\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"skippable":{"type":"Applicability","type":"Applicability","mode":"script","value":"false"},"id":"520a875700134b98a4a053f6432bb913","name":"u_msg_8","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"}},{"type":"InputPrompt","type":"InputPrompt","variable_id":"89879b037ef648028261052919cbbf77","message":{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"Enter the city you live in\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"skippable":{"type":"Applicability","type":"Applicability","mode":"script","value":"false"},"id":"74a0b8d8a782415dac0f0a3f297d3600","name":"u_msg_ct","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"formatType":"Text","validationScript":""}],"edges":[{"type":"Edge","source_node_id":"2edbd0700df34418b9874369c318ecd5","target_node_id":"b664815779ac498fbd967218a7a53778","branch_id":"b4e915aee255491b9b73ba9fc53f3f74","id":"cca2f8be81494726b1a019051bbd4fed","name":"b4e915aee255491b9b73ba9fc53f3f74"},{"type":"Edge","source_node_id":"a6b8aaa06abe465ca968a89177adc20f","target_node_id":"4b06404ae31949518c5170177c33a1aa","id":"6829b5a6ac79411b94960de2f71fd24f"},{"type":"Edge","source_node_id":"4b06404ae31949518c5170177c33a1aa","target_node_id":"2edbd0700df34418b9874369c318ecd5","id":"7ea8a2bd036c48299d108fb93cdeb382"},{"type":"Edge","source_node_id":"2edbd0700df34418b9874369c318ecd5","target_node_id":"09c5dc92eb2f48d7ad89bc4436f990f0","branch_id":"b7c67238ff4a41f59e068d3f0c266d2b","id":"e7677e4bdbd84dfcb102d09c7e3027f1","name":"b7c67238ff4a41f59e068d3f0c266d2b"},{"type":"Edge","source_node_id":"ba7d3cc85b6847eebbd5a83312a67ded","target_node_id":"11b94a49e41d4a0b957154ec328ad39f","id":"3d1b4b8b7ef74fdfaf08e8e8d2acf785"},{"type":"Edge","source_node_id":"11b94a49e41d4a0b957154ec328ad39f","target_node_id":"bfafb4d1dfdc4e81b2d5bed62d4801cb","id":"b332b729503e4a46964ccd1f3ab3818b"},{"type":"Edge","source_node_id":"09c5dc92eb2f48d7ad89bc4436f990f0","target_node_id":"f2f21b2cbd824a5282088124fa37c522","id":"d47eca7b802e4a21a13424516c01014b"},{"type":"Edge","source_node_id":"f2f21b2cbd824a5282088124fa37c522","target_node_id":"d1dd40c86b96421eaedce80861b4fb0e","id":"247ec07c01b343ac9c79b432bbde1552"},{"type":"Edge","source_node_id":"d1dd40c86b96421eaedce80861b4fb0e","target_node_id":"6e4a91ac769c4857960434464c20f776","id":"ba836e42ab184042b67b6734a04b06ae"},{"type":"Edge","source_node_id":"6e4a91ac769c4857960434464c20f776","target_node_id":"b0e2005c49f248488fc068acb1bf4abe","id":"8f1bc09cddad4988a0ba7b6de5853646"},{"type":"Edge","source_node_id":"b0e2005c49f248488fc068acb1bf4abe","target_node_id":"84399065734b48feb93972cf281b99e5","id":"6bbd948006fe4f5abb021d47855bcf86"},{"type":"Edge","source_node_id":"f612fea06dc741c781ac40f3b9b7197e","target_node_id":"520a875700134b98a4a053f6432bb913","id":"ad8216088a1340ae85a813bca06a18ce"},{"type":"Edge","source_node_id":"520a875700134b98a4a053f6432bb913","target_node_id":"ba7d3cc85b6847eebbd5a83312a67ded","id":"4a479cbbe10044f299fd8e7a29262a78"},{"type":"Edge","source_node_id":"84399065734b48feb93972cf281b99e5","target_node_id":"74a0b8d8a782415dac0f0a3f297d3600","id":"91f0d54ae4ac4532a54bc4cbbb975f14"},{"type":"Edge","source_node_id":"74a0b8d8a782415dac0f0a3f297d3600","target_node_id":"f612fea06dc741c781ac40f3b9b7197e","id":"44e216de231a43e78b05ed017cf50b70"}],"id":"primary"}],"script_variables":[{"type":"VariableDto","type":"String","name":"inc_number","value":{"type":"String","type":"String","mode":"string"},"list":false,"id":"ba61c2869c8b436196e87eec161da39a","formatType":"text","secure":false,"sensitive":false},{"type":"VariableDto","type":"String","name":"sid","value":{"type":"String","type":"String","mode":"string"},"list":false,"id":"3e4c3bf7d4f44e67b8452dce76c1186e","formatType":"text","secure":false,"sensitive":false}],"glide_variables":[{"type":"Reference","type":"Reference","table":"sys_user","id":"current-user","name":"user","formatType":"text","secure":false,"sensitive":false,"list":false},{"type":"Choice","type":"Choice","choices":[{"name":"Create case ","element":"Create case"},{"name":"Search","element":"Search"}],"id":"5b4e0d2b123d40a99b7cb1a8821d36b7","name":"u_user_input","formatType":"text","secure":false,"sensitive":false,"list":false},{"type":"VariableDto","type":"String","name":"u_msg","list":false,"id":"0cdd351220ce4b428d7e17fd0552f8ca","formatType":"Text","validationScript":"","secure":false,"sensitive":false},{"type":"VariableDto","type":"String","name":"u_msg_2","list":false,"id":"85ff4721013145138036b07508d58639","formatType":"Text","validationScript":"","secure":false,"sensitive":false},{"type":"VariableDto","type":"String","name":"u_msg_3","list":false,"id":"47ca32edf225438ca38f8dae96ba15fb","formatType":"Text","validationScript":"","secure":false,"sensitive":false},{"type":"VariableDto","type":"String","name":"u_msg_4","list":false,"id":"b920efc1448f41c2a143ff5ac7f3cdc3","formatType":"Text","validationScript":"","secure":false,"sensitive":false},{"type":"VariableDto","type":"String","name":"u_msg_5","list":false,"id":"7d0467440c254f36b2e98b84a35b3e5a","formatType":"Text","validationScript":"","secure":false,"sensitive":false},{"type":"VariableDto","type":"String","name":"u_msg_6","list":false,"id":"347916bedf61435ea6a5ff1bc96b06c5","formatType":"Text","validationScript":"","secure":false,"sensitive":false},{"type":"VariableDto","type":"String","name":"u_msg_7","list":false,"id":"8528a033ee384809ad33424776f36d77","formatType":"Text","validationScript":"","secure":false,"sensitive":false},{"type":"Date/Time","type":"Date/Time","mode":"date","id":"cbaa9caf71354f5386dd9dccdedbda4a","name":"u_msg_8","formatType":"text","secure":false,"sensitive":false,"list":false},{"type":"VariableDto","type":"String","name":"u_msg_ct","list":false,"id":"89879b037ef648028261052919cbbf77","formatType":"Text","validationScript":"","secure":false,"sensitive":false}],"applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"roles":[],"scope":"9f10ec9a97603110bd95bbc3f153af79","domain":"global","topic_type":"STANDARD","channels":[],"id":"b3d2576097413110bd95bbc3f153af7c","name":"Storing Paitent details","key_phrases":["Storing Paitent details","register as a paitent","paitent","medical"],"nlu_provider":"","nlu_model":"","nlu_model_label":"","nlu_intent":"","nlu_intent_label":"","flexible_conversation_switching":false,"autopilot_topic":true,"design_categories":[],"triggerable_by_notification":false,"library":false,"readOnly":false,"nluMapping":"[]"}</design_definition>
+        <design_topic_id>b3d2576097413110bd95bbc3f153af7c</design_topic_id>
+        <graph>{
+  "graph_api_version": "1.0.41",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "a6b8aaa06abe465ca968a89177adc20f": {
+          "id": "a6b8aaa06abe465ca968a89177adc20f",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "b664815779ac498fbd967218a7a53778": {
+          "id": "b664815779ac498fbd967218a7a53778",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "4b06404ae31949518c5170177c33a1aa": {
+          "stepType": "ChoicePrompt",
+          "name": "u_user_input",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Select choice"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "5b4e0d2b123d40a99b7cb1a8821d36b7",
+          "id": "4b06404ae31949518c5170177c33a1aa",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "2edbd0700df34418b9874369c318ecd5": {
+          "id": "2edbd0700df34418b9874369c318ecd5",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "bfafb4d1dfdc4e81b2d5bed62d4801cb": {
+          "id": "bfafb4d1dfdc4e81b2d5bed62d4801cb",
+          "stepType": "ImplicitEnd"
+        },
+        "09c5dc92eb2f48d7ad89bc4436f990f0": {
+          "id": "09c5dc92eb2f48d7ad89bc4436f990f0",
+          "stepType": "Prompt",
+          "name": "u_msg",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "enter your first name"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "0cdd351220ce4b428d7e17fd0552f8ca",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "ba7d3cc85b6847eebbd5a83312a67ded": {
+          "id": "ba7d3cc85b6847eebbd5a83312a67ded",
+          "name": "process",
+          "script": "(function execute() {\n    /* Code your scripted action here. For example, you might update a\n       record based on conditional logic:\n\n        if (vaVars.my_flag == 'say hello') {\n            gs.info('hi there');\n        } else {\n            gs.info('bye now');\n        }\n    */\n    var gr=new GlideRecord('x_1075635_capgem_0_paitentdetails');\n    gr.initialize();\n    gr.firstname=vaInputs.u_msg;\n    gr.lastname=vaInputs.u_msg_2;\n    gr.email=vaInputs.u_msg_3;\n    gr.phonenumber=vaInputs.u_msg_4;\n    gr.country=vaInputs.u_msg_5;\n    gr.country_state=vaInputs.u_msg_6;\n    gr.city=vaInputs.u_msg_ct;\n    gr.zip=vaInputs.u_msg_7;\n    gr.date_of_birth=vaInputs.u_msg_8;\n    gr.insert();\n    vaVars.inc_number=gr.number;\n    vaVars.sid=gr.sys_id;\n})()\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "11b94a49e41d4a0b957154ec328ad39f": {
+          "id": "11b94a49e41d4a0b957154ec328ad39f",
+          "stepType": "LinkOutput",
+          "name": "link",
+          "url": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "/nav_to.do?uri=x_1075635_capgem_0_paitentdetails.do?sys_id="
+                  },
+                  {
+                    "type": "datapill",
+                    "dataPill": {
+                      "value": "{{vaVars.sid}}",
+                      "displayValue": "Script Variables➛sid"
+                    },
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "label": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "type": "datapill",
+                    "dataPill": {
+                      "value": "{{vaVars.inc_number}}",
+                      "displayValue": "Script Variables➛inc_number"
+                    },
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "header": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Created case"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "linkType": "single",
+          "introMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "listOfLinks": ""
+        },
+        "f2f21b2cbd824a5282088124fa37c522": {
+          "id": "f2f21b2cbd824a5282088124fa37c522",
+          "stepType": "Prompt",
+          "name": "u_msg_2",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Enter your last name"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "85ff4721013145138036b07508d58639",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "d1dd40c86b96421eaedce80861b4fb0e": {
+          "id": "d1dd40c86b96421eaedce80861b4fb0e",
+          "stepType": "Prompt",
+          "name": "u_msg_3",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Enter your email"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "47ca32edf225438ca38f8dae96ba15fb",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "6e4a91ac769c4857960434464c20f776": {
+          "id": "6e4a91ac769c4857960434464c20f776",
+          "stepType": "Prompt",
+          "name": "u_msg_4",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Enter your phone number"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "b920efc1448f41c2a143ff5ac7f3cdc3",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "b0e2005c49f248488fc068acb1bf4abe": {
+          "id": "b0e2005c49f248488fc068acb1bf4abe",
+          "stepType": "Prompt",
+          "name": "u_msg_5",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Enter the country you live in"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "7d0467440c254f36b2e98b84a35b3e5a",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "84399065734b48feb93972cf281b99e5": {
+          "id": "84399065734b48feb93972cf281b99e5",
+          "stepType": "Prompt",
+          "name": "u_msg_6",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Enter the State you live in"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "347916bedf61435ea6a5ff1bc96b06c5",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "f612fea06dc741c781ac40f3b9b7197e": {
+          "id": "f612fea06dc741c781ac40f3b9b7197e",
+          "stepType": "Prompt",
+          "name": "u_msg_7",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Enter the zip code"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "8528a033ee384809ad33424776f36d77",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "520a875700134b98a4a053f6432bb913": {
+          "id": "520a875700134b98a4a053f6432bb913",
+          "stepType": "Prompt",
+          "name": "u_msg_8",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Enter your date of birth"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "cbaa9caf71354f5386dd9dccdedbda4a"
+        },
+        "74a0b8d8a782415dac0f0a3f297d3600": {
+          "id": "74a0b8d8a782415dac0f0a3f297d3600",
+          "stepType": "Prompt",
+          "name": "u_msg_ct",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Enter the city you live in"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "89879b037ef648028261052919cbbf77",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        }
+      },
+      "edges": [
+        {
+          "id": "cca2f8be81494726b1a019051bbd4fed",
+          "edgeType": "Branch",
+          "source": "2edbd0700df34418b9874369c318ecd5",
+          "target": "b664815779ac498fbd967218a7a53778",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.u_user_input=Search",
+            "mode": "query"
+          },
+          "label": "search"
+        },
+        {
+          "id": "6829b5a6ac79411b94960de2f71fd24f",
+          "edgeType": "Edge",
+          "source": "a6b8aaa06abe465ca968a89177adc20f",
+          "target": "4b06404ae31949518c5170177c33a1aa",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "7ea8a2bd036c48299d108fb93cdeb382",
+          "edgeType": "Edge",
+          "source": "4b06404ae31949518c5170177c33a1aa",
+          "target": "2edbd0700df34418b9874369c318ecd5",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "e7677e4bdbd84dfcb102d09c7e3027f1",
+          "edgeType": "Branch",
+          "source": "2edbd0700df34418b9874369c318ecd5",
+          "target": "09c5dc92eb2f48d7ad89bc4436f990f0",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.u_user_input=Create case",
+            "mode": "query"
+          },
+          "label": "create new"
+        },
+        {
+          "id": "3d1b4b8b7ef74fdfaf08e8e8d2acf785",
+          "edgeType": "Edge",
+          "source": "ba7d3cc85b6847eebbd5a83312a67ded",
+          "target": "11b94a49e41d4a0b957154ec328ad39f",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "b332b729503e4a46964ccd1f3ab3818b",
+          "edgeType": "Edge",
+          "source": "11b94a49e41d4a0b957154ec328ad39f",
+          "target": "bfafb4d1dfdc4e81b2d5bed62d4801cb",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "d47eca7b802e4a21a13424516c01014b",
+          "edgeType": "Edge",
+          "source": "09c5dc92eb2f48d7ad89bc4436f990f0",
+          "target": "f2f21b2cbd824a5282088124fa37c522",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "247ec07c01b343ac9c79b432bbde1552",
+          "edgeType": "Edge",
+          "source": "f2f21b2cbd824a5282088124fa37c522",
+          "target": "d1dd40c86b96421eaedce80861b4fb0e",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "ba836e42ab184042b67b6734a04b06ae",
+          "edgeType": "Edge",
+          "source": "d1dd40c86b96421eaedce80861b4fb0e",
+          "target": "6e4a91ac769c4857960434464c20f776",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "8f1bc09cddad4988a0ba7b6de5853646",
+          "edgeType": "Edge",
+          "source": "6e4a91ac769c4857960434464c20f776",
+          "target": "b0e2005c49f248488fc068acb1bf4abe",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "6bbd948006fe4f5abb021d47855bcf86",
+          "edgeType": "Edge",
+          "source": "b0e2005c49f248488fc068acb1bf4abe",
+          "target": "84399065734b48feb93972cf281b99e5",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "ad8216088a1340ae85a813bca06a18ce",
+          "edgeType": "Edge",
+          "source": "f612fea06dc741c781ac40f3b9b7197e",
+          "target": "520a875700134b98a4a053f6432bb913",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "4a479cbbe10044f299fd8e7a29262a78",
+          "edgeType": "Edge",
+          "source": "520a875700134b98a4a053f6432bb913",
+          "target": "ba7d3cc85b6847eebbd5a83312a67ded",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "91f0d54ae4ac4532a54bc4cbbb975f14",
+          "edgeType": "Edge",
+          "source": "84399065734b48feb93972cf281b99e5",
+          "target": "74a0b8d8a782415dac0f0a3f297d3600",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "44e216de231a43e78b05ed017cf50b70",
+          "edgeType": "Edge",
+          "source": "74a0b8d8a782415dac0f0a3f297d3600",
+          "target": "f612fea06dc741c781ac40f3b9b7197e",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "5b4e0d2b123d40a99b7cb1a8821d36b7": {
+      "id": "5b4e0d2b123d40a99b7cb1a8821d36b7",
+      "name": "u_user_input",
+      "label": "U_user_input",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "Create case ",
+          "value": "Create case"
+        },
+        {
+          "label": "Search",
+          "value": "Search"
+        }
+      ],
+      "category": "vaInputs"
+    },
+    "ba61c2869c8b436196e87eec161da39a": {
+      "id": "ba61c2869c8b436196e87eec161da39a",
+      "value": {
+        "value": "",
+        "mode": "simple"
+      },
+      "name": "inc_number",
+      "label": "inc_number",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "3e4c3bf7d4f44e67b8452dce76c1186e": {
+      "id": "3e4c3bf7d4f44e67b8452dce76c1186e",
+      "value": {
+        "value": "",
+        "mode": "simple"
+      },
+      "name": "sid",
+      "label": "sid",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "0cdd351220ce4b428d7e17fd0552f8ca": {
+      "id": "0cdd351220ce4b428d7e17fd0552f8ca",
+      "name": "u_msg",
+      "label": "U_msg",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTY5MzQ2NDY2MTA2NiBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    },
+    "85ff4721013145138036b07508d58639": {
+      "id": "85ff4721013145138036b07508d58639",
+      "name": "u_msg_2",
+      "label": "U_msg_2",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTY5MzQ2NjY3MjE1MyBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    },
+    "47ca32edf225438ca38f8dae96ba15fb": {
+      "id": "47ca32edf225438ca38f8dae96ba15fb",
+      "name": "u_msg_3",
+      "label": "U_msg_3",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTY5MzQ2NjcxNDk4MCBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    },
+    "b920efc1448f41c2a143ff5ac7f3cdc3": {
+      "id": "b920efc1448f41c2a143ff5ac7f3cdc3",
+      "name": "u_msg_4",
+      "label": "U_msg_4",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTY5MzQ2Njc2Njg4OCBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    },
+    "7d0467440c254f36b2e98b84a35b3e5a": {
+      "id": "7d0467440c254f36b2e98b84a35b3e5a",
+      "name": "u_msg_5",
+      "label": "U_msg_5",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTY5MzQ3MjgxMTU5NiBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    },
+    "347916bedf61435ea6a5ff1bc96b06c5": {
+      "id": "347916bedf61435ea6a5ff1bc96b06c5",
+      "name": "u_msg_6",
+      "label": "U_msg_6",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTY5MzQ3MjgzOTEyMyBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    },
+    "8528a033ee384809ad33424776f36d77": {
+      "id": "8528a033ee384809ad33424776f36d77",
+      "name": "u_msg_7",
+      "label": "U_msg_7",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTY5MzQ3Mjg2Njg4NCBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    },
+    "cbaa9caf71354f5386dd9dccdedbda4a": {
+      "id": "cbaa9caf71354f5386dd9dccdedbda4a",
+      "name": "u_msg_8",
+      "label": "U_msg_8",
+      "varType": "date_time",
+      "secure": false,
+      "category": "vaInputs",
+      "mode": "date"
+    },
+    "89879b037ef648028261052919cbbf77": {
+      "id": "89879b037ef648028261052919cbbf77",
+      "name": "u_msg_ct",
+      "label": "U_msg_ct",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTY5MzU0NjQ2NzM0NSBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    }
+  }
+}</graph>
+        <name>Storing Paitent details</name>
+        <sys_class_name>sys_cb_design_topic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-31 06:55:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>a230e7e097813110bd95bbc3f153af5a</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>FlowTopic</sys_name>
+        <sys_package display_value="Capgemini" source="x_1075635_capgem_0">9f10ec9a97603110bd95bbc3f153af79</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Capgemini">9f10ec9a97603110bd95bbc3f153af79</sys_scope>
+        <sys_update_name>sys_cb_design_topic_a230e7e097813110bd95bbc3f153af5a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-01 05:52:19</sys_updated_on>
+        <type>FlowTopic</type>
+    </sys_cb_design_topic>
+</record_update>

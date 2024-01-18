@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_composite_data_m2m_predicate_bundle">
+    <sys_ux_composite_data_m2m_predicate_bundle action="INSERT_OR_UPDATE">
+        <dataset display_value="Custom Portal Landing - Popular Articles">5fa66eb750e031109a97843877a19204</dataset>
+        <order/>
+        <predicate_bundle display_value="Popular articles bundle">9fa66eb78ee031109ac38d6df6fa9602</predicate_bundle>
+        <sys_class_name>sys_ux_composite_data_m2m_predicate_bundle</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2023-08-16 08:33:24</sys_created_on>
+        <sys_id>53a66eb7bee03110c1d5a9175fe67803</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Capgemini" source="x_1075635_capgem_0">9f10ec9a97603110bd95bbc3f153af79</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Capgemini">9f10ec9a97603110bd95bbc3f153af79</sys_scope>
+        <sys_update_name>sys_ux_composite_data_m2m_predicate_bundle_53a66eb7bee03110c1d5a9175fe67803</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-08-16 08:33:24</sys_updated_on>
+    </sys_ux_composite_data_m2m_predicate_bundle>
+</record_update>

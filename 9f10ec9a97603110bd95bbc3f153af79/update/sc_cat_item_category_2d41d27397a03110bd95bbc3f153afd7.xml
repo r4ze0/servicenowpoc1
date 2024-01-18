@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="create a case">e93f8ebf97603110bd95bbc3f153af7a</sc_cat_item>
+        <sc_category display_value="Support">1b8611d5c3921200b0449f2974d3ae12</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-16 06:59:51</sys_created_on>
+        <sys_id>2d41d27397a03110bd95bbc3f153afd7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Support.create a case</sys_name>
+        <sys_package display_value="Capgemini" source="x_1075635_capgem_0">9f10ec9a97603110bd95bbc3f153af79</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Capgemini">9f10ec9a97603110bd95bbc3f153af79</sys_scope>
+        <sys_update_name>sc_cat_item_category_2d41d27397a03110bd95bbc3f153afd7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-16 06:59:51</sys_updated_on>
+    </sc_cat_item_category>
+</record_update>

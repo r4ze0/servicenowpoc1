@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_form_action">
+    <sys_ux_form_action action="INSERT_OR_UPDATE">
+        <action_type>ui_action</action_type>
+        <active>true</active>
+        <declarative_action/>
+        <description/>
+        <name>Create Case</name>
+        <specificity>10</specificity>
+        <sys_class_name>sys_ux_form_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-23 06:22:50</sys_created_on>
+        <sys_id>b7eb4a4e97703110bd95bbc3f153af3b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create Case</sys_name>
+        <sys_package display_value="Capgemini" source="x_1075635_capgem_0">9f10ec9a97603110bd95bbc3f153af79</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Capgemini">9f10ec9a97603110bd95bbc3f153af79</sys_scope>
+        <sys_update_name>sys_ux_form_action_b7eb4a4e97703110bd95bbc3f153af3b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-23 06:22:50</sys_updated_on>
+        <table>interaction</table>
+        <ui_action display_value="Create capg case">b3eb4a4e97703110bd95bbc3f153af3b</ui_action>
+    </sys_ux_form_action>
+</record_update>

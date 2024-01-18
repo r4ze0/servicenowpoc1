@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="98a0a01e97603110bd95bbc3f153af8c" extends="task" label="Case" max_length="40" name="x_1075635_capgem_0_case" text_index="true" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Chat conversations" max_length="4000" name="chat_conversations" type="journal"/>
+        <element attributes="edge_encryption_enabled=true" label="City" max_length="255" name="city" type="string_full_utf8"/>
+        <element attributes="edge_encryption_enabled=true" label="Country" max_length="40" name="country" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Date-of-birth" max_length="40" name="date_of_birth" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Email" max_length="40" name="email" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="firstName" max_length="40" name="firstname" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Lastname" max_length="40" name="lastname" type="string"/>
+        <element attributes="encode_utf8=false" label="Medical info" max_length="32" name="medical_info" reference="x_1075635_capgem_0_medicalinfo" type="reference"/>
+        <element label="Phonenumber" max_length="40" name="phonenumber" type="string_full_utf8"/>
+        <element attributes="edge_encryption_enabled=true" label="State(Country's)" max_length="40" name="state_country_s" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Zip" max_length="255" name="zip" type="string_full_utf8"/>
+    </element>
+</database>

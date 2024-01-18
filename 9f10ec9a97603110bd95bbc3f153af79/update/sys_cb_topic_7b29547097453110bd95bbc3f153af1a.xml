@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic">
+    <sys_cb_topic action="INSERT_OR_UPDATE">
+        <applicability/>
+        <applicability_mode>query</applicability_mode>
+        <autopilot_topic>true</autopilot_topic>
+        <category/>
+        <channels/>
+        <connect_queue/>
+        <description/>
+        <expose_on_palette>false</expose_on_palette>
+        <flexible_conversation_switching>false</flexible_conversation_switching>
+        <graph>{"graph_api_version":"1.0.41","variables":{},"goals":{"primary":{"id":"primary","trigger":{"type":"primary"},"name":"primary","applicability":"","description":"","nodes":{"9ffdd95b4e37487da42938a1221ea9cf":{"id":"9ffdd95b4e37487da42938a1221ea9cf","stepType":"Start","name":"Start","greetingResponse":{"mode":"simple","value":""}},"4a401d4cedb148a1aba25bec3bcd5fe5":{"id":"4a401d4cedb148a1aba25bec3bcd5fe5","stepType":"TerminateGoal","name":"End","confirmationMessage":{"mode":"simple","value":""}}},"edges":[{"id":"10fc287b5acc489ca91d83dbfd88896d","edgeType":"Edge","source":"9ffdd95b4e37487da42938a1221ea9cf","target":"4a401d4cedb148a1aba25bec3bcd5fe5","sourcePort":"","targetPort":""}]}}}</graph>
+        <key_phrases>Storing medical info of the paitent,medical,medical info,provide medical info</key_phrases>
+        <library>false</library>
+        <live_agent>false</live_agent>
+        <name>Storing medical info of the paitent</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <palette_label/>
+        <roles/>
+        <secure_custom_input_control>false</secure_custom_input_control>
+        <source_topic_id/>
+        <sys_class_name>sys_cb_topic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-31 11:04:48</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>7b29547097453110bd95bbc3f153af1a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Storing medical info of the paitent</sys_name>
+        <sys_package display_value="Capgemini" source="x_1075635_capgem_0">9f10ec9a97603110bd95bbc3f153af79</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Capgemini">9f10ec9a97603110bd95bbc3f153af79</sys_scope>
+        <sys_update_name>sys_cb_topic_7b29547097453110bd95bbc3f153af1a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-31 11:04:48</sys_updated_on>
+        <triggerable_by_notification>false</triggerable_by_notification>
+        <type>STANDARD</type>
+        <variables/>
+    </sys_cb_topic>
+    <sys_variable_value action="delete_multiple" query="document_key=7b29547097453110bd95bbc3f153af1a"/>
+</record_update>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property">
+    <sys_ux_page_property action="DELETE">
+        <choices/>
+        <description/>
+        <name>chrome_menu_actions</name>
+        <page display_value="">efd0a81e75603110dd0d99ed71b50383</page>
+        <required_translations>[{"message":"Report issue","comment":""}]</required_translations>
+        <route/>
+        <suffix/>
+        <sys_class_name>sys_ux_page_property</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2023-08-11 06:57:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>global</sys_domain_path>
+        <sys_id>e7d0a81e6a603110a98bc81666274e86</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>chrome_menu_actions</sys_name>
+        <sys_package display_value="Capgemini" source="x_1075635_capgem_0">9f10ec9a97603110bd95bbc3f153af79</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Capgemini">9f10ec9a97603110bd95bbc3f153af79</sys_scope>
+        <sys_update_name>sys_ux_page_property_e7d0a81e6a603110a98bc81666274e86</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-08-11 06:57:54</sys_updated_on>
+        <type>json</type>
+        <unique_name>x_1075635_capgem_0.efd0a81e75603110dd0d99ed71b50383.root.chrome_menu_actions</unique_name>
+        <value>{&#13;
+    "label": {"translatable":true, "message":"Report issue"},&#13;
+    "value": {&#13;
+  		"route":"catalog",&#13;
+       	"fields":{&#13;
+                   "sysId": "3f1dd0320a0a0b99000a53f7604a2ef9"&#13;
+		}&#13;
+	}&#13;
+}</value>
+    </sys_ux_page_property>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Capgemini">9f10ec9a97603110bd95bbc3f153af79</application>
+        <file_path/>
+        <instance_id>f606dcb9dbe72010c6e711f848961980</instance_id>
+        <instance_name>dev112004</instance_name>
+        <name>sys_ux_page_property_e7d0a81e6a603110a98bc81666274e86</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property"><sys_ux_page_property action="INSERT_OR_UPDATE"><choices/><description/><name>chrome_menu_actions</name><page display_value="">efd0a81e75603110dd0d99ed71b50383</page><required_translations>[{"message":"Report issue","comment":""}]</required_translations><route/><suffix/><sys_class_name>sys_ux_page_property</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2023-08-11 06:57:54</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>global</sys_domain_path><sys_id>e7d0a81e6a603110a98bc81666274e86</sys_id><sys_mod_count>0</sys_mod_count><sys_name>chrome_menu_actions</sys_name><sys_package display_value="Capgemini" source="x_1075635_capgem_0">9f10ec9a97603110bd95bbc3f153af79</sys_package><sys_policy/><sys_scope display_value="Capgemini">9f10ec9a97603110bd95bbc3f153af79</sys_scope><sys_update_name>sys_ux_page_property_e7d0a81e6a603110a98bc81666274e86</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2023-08-11 06:57:54</sys_updated_on><type>json</type><unique_name>x_1075635_capgem_0.efd0a81e75603110dd0d99ed71b50383.root.chrome_menu_actions</unique_name><value>{&#13;
+    "label": {"translatable":true, "message":"Report issue"},&#13;
+    "value": {&#13;
+  		"route":"catalog",&#13;
+       	"fields":{&#13;
+                   "sysId": "3f1dd0320a0a0b99000a53f7604a2ef9"&#13;
+		}&#13;
+	}&#13;
+}</value></sys_ux_page_property></record_update>]]></payload>
+        <payload_hash>94511755</payload_hash>
+        <record_name>chrome_menu_actions</record_name>
+        <reverted_from/>
+        <source>6124088297203110bd95bbc3f153afba</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2023-08-10 10:13:53</sys_created_on>
+        <sys_id>9651645e97603110bd95bbc3f153af89</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>189def03ae80000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>UX Page Property</type>
+        <update_guid>5651645eb96031103df63d5047c90f89</update_guid>
+        <update_guid_history>5651645eb96031103df63d5047c90f89:94511755</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-11 06:59:57</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_page_property">sys_ux_page_property</sys_db_object>
+        <sys_id>41f2c18a1b9a4d70ac6dc14067046e90</sys_id>
+        <sys_metadata>e7d0a81e6a603110a98bc81666274e86</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>chrome_menu_actions</sys_name>
+        <sys_package display_value="Capgemini" source="x_1075635_capgem_0">9f10ec9a97603110bd95bbc3f153af79</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Capgemini">9f10ec9a97603110bd95bbc3f153af79</sys_scope>
+        <sys_scope_delete display_value="">17430a34acfb4f68bd62e37c5c256040</sys_scope_delete>
+        <sys_update_name>sys_ux_page_property_e7d0a81e6a603110a98bc81666274e86</sys_update_name>
+        <sys_update_version display_value="sys_ux_page_property_e7d0a81e6a603110a98bc81666274e86">9651645e97603110bd95bbc3f153af89</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-11 06:59:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

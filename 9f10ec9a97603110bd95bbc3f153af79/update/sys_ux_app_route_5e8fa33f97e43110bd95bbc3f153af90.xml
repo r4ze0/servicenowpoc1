@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="INSERT_OR_UPDATE">
+        <app_config display_value="CSM/FSM Configurable Workspace App Config">f224e5a3530210102c30ddeeff7b128d</app_config>
+        <description>Route definition for Ongoing empty.</description>
+        <extension_point/>
+        <fields/>
+        <icon/>
+        <name>Ongoing Empty</name>
+        <optional_parameters/>
+        <order>0</order>
+        <parent_macroponent display_value="Agent Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent>
+        <parent_macroponent_composition_element_id/>
+        <route_type>ongoing</route_type>
+        <screen_type display_value="Ongoing Empty">8c7b9995c36350101d590cf06e40dd43</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-16 13:51:40</sys_created_on>
+        <sys_id>5e8fa33f97e43110bd95bbc3f153af90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Ongoing Empty</sys_name>
+        <sys_package display_value="Capgemini" source="x_1075635_capgem_0">9f10ec9a97603110bd95bbc3f153af79</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Capgemini">9f10ec9a97603110bd95bbc3f153af79</sys_scope>
+        <sys_update_name>sys_ux_app_route_5e8fa33f97e43110bd95bbc3f153af90</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-16 13:51:40</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="delete_multiple" query="documentkey=5e8fa33f97e43110bd95bbc3f153af90"/>
+</record_update>

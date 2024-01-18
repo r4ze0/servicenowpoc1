@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="email_client=true,hasWorkflow=true,live_feed=true,all_tables.query_hints=true" audit="true" db_object_id="40b16076d4a3211095d7c105f1bf431c" extends="task" label="Incident" max_length="40" name="incident" text_index="true" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Country" max_length="40" name="x_1075635_capgem_0_country" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="DOB" max_length="40" name="x_1075635_capgem_0_dob" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="email" max_length="40" name="x_1075635_capgem_0_email" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="firstname" max_length="40" name="x_1075635_capgem_0_firstname" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="lastname" max_length="40" name="x_1075635_capgem_0_lastname" type="string"/>
+        <element label="phonenumber" max_length="40" name="x_1075635_capgem_0_phonenumber" type="string_full_utf8"/>
+        <element attributes="edge_encryption_enabled=true" label="State(Country)" max_length="40" name="x_1075635_capgem_0_state_country" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Zip" max_length="255" name="x_1075635_capgem_0_zip" type="string_full_utf8"/>
+    </element>
+</database>
