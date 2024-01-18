@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="serology_test_result" label="serology test result" language="en" table="x_1075635_capgem_0_medicalinfo">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>serology_test_result</element>
+            <help/>
+            <hint/>
+            <label>serology test result</label>
+            <language>en</language>
+            <name>x_1075635_capgem_0_medicalinfo</name>
+            <plural>serology test results</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-08-31 15:24:15</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>serology test result</sys_name>
+            <sys_package display_value="Capgemini" source="x_1075635_capgem_0">9f10ec9a97603110bd95bbc3f153af79</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Capgemini">9f10ec9a97603110bd95bbc3f153af79</sys_scope>
+            <sys_update_name>sys_documentation_x_1075635_capgem_0_medicalinfo_serology_test_result_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-08-31 15:24:15</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

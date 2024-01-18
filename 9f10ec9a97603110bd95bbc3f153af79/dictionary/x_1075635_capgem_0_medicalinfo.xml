@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="7e1adc7c97453110bd95bbc3f153af6c" extends="task" label="MedicalInfo" max_length="40" name="x_1075635_capgem_0_medicalinfo" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="BloodGroup" max_length="255" name="bloodgroup" type="string_full_utf8"/>
+        <element attributes="edge_encryption_enabled=true" label="blood glucose" max_length="255" name="blood_glucose" type="string_full_utf8"/>
+        <element attributes="edge_encryption_enabled=true" label="Blood pressure" max_length="255" name="blood_pressure" type="string_full_utf8"/>
+        <element attributes="edge_encryption_enabled=true" label="blood sugar" max_length="255" name="blood_sugar" type="string_full_utf8"/>
+        <element attributes="edge_encryption_enabled=true" label="Height" max_length="255" name="height" type="string_full_utf8"/>
+        <element label="serology test result" max_length="40" name="serology_test_result" type="file_attachment"/>
+        <element attributes="edge_encryption_enabled=true" label="Weight" max_length="255" name="weight" type="string_full_utf8"/>
+    </element>
+</database>
